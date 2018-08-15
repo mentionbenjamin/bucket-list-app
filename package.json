@@ -1,0 +1,33 @@
+{
+  "name": "bucket_list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "webpack -w",
+    "server:dev": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mentionbenjamin/bucket-list-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mentionbenjamin/bucket-list-app/issues"
+  },
+  "homepage": "https://github.com/mentionbenjamin/bucket-list-app#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.3",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^3.0.7"
+  }
+}
