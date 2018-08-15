@@ -13,9 +13,8 @@ SelectView.prototype.bindEvents = function () {
 
 function handleSubmit(evt) {
   const newDream = evt.target["bucket-input"].value;
-  PubSub.publish("SelectView:dream-submitted", newDream);
+  PubSub.publish('SelectView:dream-submitted', newDream);
   evt.target.reset();
 };
-
 
 module.exports = SelectView;
