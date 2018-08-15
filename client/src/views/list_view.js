@@ -13,7 +13,7 @@ ListView.prototype.bindEvents = function () {
 };
 
 function render(data, container) {
-  console.log("container", container);
+  // console.log("container", container);
   const detailView = new DetailView(container);
   detailView.render(data);
 };
