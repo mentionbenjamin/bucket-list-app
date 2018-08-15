@@ -6,12 +6,16 @@ const SelectView = function (form) {
 
 SelectView.prototype.bindEvents = function () {
   this.form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
     handleSubmit(evt);
   });
 };
 
 function handleSubmit(evt) {
-  console.log("Banana");
+  const newDream = evt.target["bucket-input"].value;
+  PubSub.publish("SelectView:dream-submitted", newDream);
+  evt.target.reset();
 };
+
 
 module.exports = SelectView;
