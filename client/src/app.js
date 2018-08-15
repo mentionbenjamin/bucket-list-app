@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectView = new SelectView(form);
   selectView.bindEvents();
 
-  const dreamContainer = document.querySelector('#bucket-list-results');
+  const dreamContainer = document.querySelector('div#bucket-list-results');
   const listView = new ListView(dreamContainer);
+  console.log(dreamContainer);
   listView.bindEvents();
 
   const bucketList = new BucketList();
