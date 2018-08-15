@@ -9,10 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dreamContainer = document.querySelector('div#bucket-list-results');
   const listView = new ListView(dreamContainer);
-  console.log(dreamContainer);
   listView.bindEvents();
 
   const bucketList = new BucketList();
-  bucketList.bindEvents();
   bucketList.getData();
+  bucketList.bindEvents();
 });

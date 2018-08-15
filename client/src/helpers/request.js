@@ -4,9 +4,7 @@ const Request = function (url) {
 
 Request.prototype.get = function () {
   return fetch(this.url)
-    .then((response) => {
-        response.json()
-    });
+    .then((response) => response.json());
 };
 
 Request.prototype.post = function (payload) {

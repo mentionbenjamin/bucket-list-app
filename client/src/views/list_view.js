@@ -7,15 +7,14 @@ const ListView = function (container) {
 
 ListView.prototype.bindEvents = function () {
   PubSub.subscribe('BucketList:dream-result', (evt) => {
-    const newDream = evt.detail;
-    render(newDream, this.container);
+    this.render(evt.detail);
   });
 };
 
-function render(data, container) {
-  // console.log("container", container);
-  const detailView = new DetailView(container);
-  detailView.render(data);
+ListView.prototype.render = function (dreams) {
+  this.container.innerHTML = '';
+  const detailView = new DetailView(this.container);
+  dreams.forEach((dream) => detailView.render(dream));
 };
 
 module.exports = ListView;

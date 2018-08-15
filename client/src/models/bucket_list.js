@@ -8,14 +8,16 @@ const BucketList = function (url) {
 
 BucketList.prototype.bindEvents = function () {
   PubSub.subscribe('SelectView:dream-submitted', (evt) => {
+
     this.postDream(evt.detail);
-    // console.log(evt.detail);
+    console.log(evt.detail);
   });
 };
 
 BucketList.prototype.getData = function () {
   this.request.get()
     .then((dreams) => {
+      console.log("Dreams", dreams);
       PubSub.publish('BucketList:dream-result', dreams);
     })
     .catch(console.error);

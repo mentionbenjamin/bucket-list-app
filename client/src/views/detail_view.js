@@ -5,7 +5,7 @@ const DetailView = function (container) {
 DetailView.prototype.render = function (data) {
   const dreamText = document.createElement('p');
   dreamText.classList.add('dream-child');
-  dreamText.textContent = data;
+  dreamText.textContent = data.text;
   this.container.appendChild(dreamText);
 };
 

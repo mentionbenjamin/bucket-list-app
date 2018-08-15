@@ -17,6 +17,13 @@ const createRouter = function (collection) {
   });
 
   // CREATE
+  router.post('/', (req, res) => {
+    const newData = req.body;
+    collection.insertOne(newData)
+      .then(() => { return collection.find().toArray()})
+      .then(docs => res.json(docs))
+      .catch(error => console.error(error));
+  });
 
   // SHOW
   router.get('/:id', (req, res) => {
