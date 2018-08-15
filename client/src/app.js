@@ -14,4 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const bucketList = new BucketList();
   bucketList.bindEvents();
+  bucketList.getData();
 });

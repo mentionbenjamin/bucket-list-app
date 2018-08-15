@@ -1,7 +1,7 @@
 {
   "name": "bucket_list",
   "version": "1.0.0",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
     "build": "webpack -w",
